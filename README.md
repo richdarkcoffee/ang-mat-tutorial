@@ -1,3 +1,12 @@
+# Notes from the lecture
+
+Notes from exploring “Decorators”
+http://robdodson.me/javascript-design-patterns-decorator/
+
+Designing dashboard with this tutorial:
+https://auth0.com/blog/creating-beautiful-apps-with-angular-material/
+
+
 # AngMatTutorial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
