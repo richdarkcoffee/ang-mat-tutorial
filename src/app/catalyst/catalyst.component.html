@@ -8,7 +8,7 @@
       </li>
     </ul>
 
-    <div *ngIf="selectedCatalyst">
+    <!-- <div *ngIf="selectedCatalyst">
       <h2>{{selectedCatalyst.name | uppercase}} Details</h2>
       <div><span>id: </span>{{selectedCatalyst.id}}</div>
       <img src="assets/img/{{selectedCatalyst.image}}">
@@ -17,16 +17,20 @@
           <input [(ngModel)]="selectedCatalyst.name" placeholder="name">
         </label>
       </div>
-    </div>
+    </div> -->
     <div *ngIf="selectedCatalyst">
-        <h2>{{selectedCatalyst.name | uppercase}} Details</h2>
-        <div><span>id: </span>{{selectedCatalyst.id}}</div>
-        <img src="assets/img/{{selectedCatalyst.image}}">
-        <div>
-          <label>name:
-            <input [(ngModel)]="selectedCatalyst.name" placeholder="name">
-          </label>
-        </div>
+        <mat-card>
+            <img src="assets/img/{{selectedCatalyst.image}}" class="mat-card-image" alt="image caption">
+            <mat-card-content>
+              <h2>{{selectedCatalyst.name | uppercase}} Details</h2>
+              <p><span>id: </span>{{selectedCatalyst.id}}</p>
+            </mat-card-content>
+            <mat-card-footer>
+                <label>name:
+                    <input [(ngModel)]="selectedCatalyst.name" placeholder="name">
+                  </label>
+            </mat-card-footer>
+           </mat-card>
       </div>
     </div>
 </div>
