@@ -1,4 +1,9 @@
 /* HeroesComponent's private CSS styles */
+.cards {
+  display: flex;
+  flex: 0 0 250px;
+  flex-wrap: wrap
+}
 .selected {
     background-color: #CFD8DC !important;
     color: white;

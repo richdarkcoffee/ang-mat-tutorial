@@ -1,13 +1,13 @@
-<div ng-cloak layout="row" layout-xs="column">
-    <div flex>
-    <h2>Catalyst Details</h2>
+<div>
+   
+    <h2>Staff Details</h2>
+    <div class="cards">
     <ul class="catalysts">
       <li *ngFor="let catalyst of catalysts" (click)="onSelect(catalyst)">
         <span class="badge">{{catalyst.id}}</span>{{catalyst.name | uppercase}}
       </li>
     </ul>
-  </div>
-  <div flex>
+
     <div *ngIf="selectedCatalyst">
       <h2>{{selectedCatalyst.name | uppercase}} Details</h2>
       <div><span>id: </span>{{selectedCatalyst.id}}</div>
@@ -18,5 +18,15 @@
         </label>
       </div>
     </div>
-  </div>
+    <div *ngIf="selectedCatalyst">
+        <h2>{{selectedCatalyst.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{selectedCatalyst.id}}</div>
+        <img src="assets/img/{{selectedCatalyst.image}}">
+        <div>
+          <label>name:
+            <input [(ngModel)]="selectedCatalyst.name" placeholder="name">
+          </label>
+        </div>
+      </div>
+    </div>
 </div>
