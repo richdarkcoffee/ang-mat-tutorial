@@ -37,3 +37,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Images
+/src/assets/img/*.png
+
+# Fake database files
+/src/app/mock-projects.ts
