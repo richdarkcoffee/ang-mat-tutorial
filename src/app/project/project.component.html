@@ -1,0 +1,17 @@
+<h2>Project Details</h2>
+<ul class="projects">
+    <li *ngFor="let project of projects" (click)="onSelect(project)">
+        <span class="badge">{{project.id}}</span>{{project.shortname | uppercase}}
+    </li>
+</ul>
+<div *ngIf="selectedProject">
+    
+<h2>{{selectedProject.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedProject.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedProject.shortname" placeholder="name">
+  </label>
+</div>
+
+</div>
